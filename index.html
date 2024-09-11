@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+
+
+let celebridade = prompt('Escolha uma celebridade para saber informações sobre ela. Neymar - Pelé - Pablo Marçal').toLowerCase();
+
+
+function personagem (nome, altura, peso, idade){
+    this.nome = nome
+    this.altura = altura
+    this.peso = peso
+    this.idade = idade
+
+    this.mostrarIformacoes = function(){
+        alert(`${this.nome}. ${this.altura}. ${this.peso}. ${this.idade}.`)
+        }
+    }
+
+
+
+const neymar = new personagem('Nome Completo: Neymar da Silva Santos Junior', 'Altura: 1,75m', 'Peso: 72kg', 'Idade: 32 Anos' );
+
+const pele = new personagem('Nome Completo:', 'Edson Arantes do Nascimento', 'Altura: 1,73m', 'Peso: 78Kg', 'Idade: 82 anos' );
+
+const pablo = new personagem('Nome Completo: Pablo Marçal', 'Altura: 1,80m', 'Peso: Informações sobre o peso de Pablo Marçal não são divulgadas.', 'Idade: 38 anos');
+
+
+while(celebridade !== 'sair'){
+    switch(celebridade){
+        case 'neymar':
+            neymar.mostrarIformacoes();
+            break;
+        case 'pele':
+            pele.mostrarIformacoes();
+            break;
+        case 'pablo marçal':
+            pablo.mostrarIformacoes();
+            break;
+        default:
+            alert('Escolha Invalida.')
+        break;
+
+    
+        
+    }
+    alert('[Digite sair para parar o programa]')
+    celebridade = prompt('Escolha uma celebridade para saber informações sobre ela. Neymar - Pelé - Pablo Marçal!').toLowerCase();
+
+    
+
+}
+
+    </script>
+</body>
+</html>
